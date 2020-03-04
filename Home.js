@@ -22,7 +22,7 @@
 	var searchTerm = '';
 	var xhrRequest;
 	// The initialize function must be run each time a new page is loaded.
-	Office.initialize = function (reason) {
+
 		$(document).ready(function () {
 
 			//  ###  D - EVENTS AREA  ###
@@ -198,7 +198,7 @@
 
 
 		});
-	};
+
 
 	//  ###  C - GRAPHICS MGMT AREA  ###
 	function updateGraphicItemsAreaOnSearch() {
