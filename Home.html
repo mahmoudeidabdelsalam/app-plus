@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+	<link href="Home.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="appSettings.js"></script>
+	<script src="Scripts/Utilities.js" type="text/javascript"></script>
+	<script src="Home.js" type="text/javascript"></script>
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" rel="stylesheet" /><!-- To enable the offline use of Office UI Fabric, use: -->
+	<link href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.min.css" rel="stylesheet" />
+	<link href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css" rel="stylesheet" />
+	<title>Premast Plus</title>
+</head>
+<body class="ovrfl-x-hidden">
+	<div class="ms-Grid" id="headerArea">
+		<div class="ms-Grid-row alignDivContentToCenter">
+			<div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12 mrg-top85 mrg-btm53" id="main-logo"><img class="logo-img-format" src="Images/premast-plus-logo.png" /></div>
+			<div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12 disp-n" id="main-alt"><label id="main-alt-lbl">Premast Plus</label></div>
+		</div>
+	</div>
+	<div id="logInArea">
+		<div class="form-group alignDivContentToCenter">
+			<p></p>
+			<span class="text-h-1">Unleash the use of PowerPoint</span><br />
+			<span class="text-h-3">Make stunning PowerPoint designs</span><br />
+			<span class="text-h-3">faster than ever with templates, editable</span><br />
+			<span class="text-h-3 mrg-btm64">graphics, icons and backgrounds</span> <input class="form-control alignInputBoxToCenter mrg-top64 mrg-btm21" id="logInWithCredEmail" placeholder="E-mail" type="email" /><br />
+			<input class="form-control alignInputBoxToCenter mrg-btm18" id="logInWithCredPassword" placeholder="Password" type="password" /><br />
+			<button class="btn btn-primary" id="logInWithCredBtn" style="margin-bottom:18px;" type="button">Log In</button><br />
+			<label class="forgot-password-lbl" id="forgot-password"><a href="https://premast.com/login/" style="color:rgba(233, 23, 48, 0.76);font-style:normal;font-size:12px;font-weight:normal;line-height:14px;" target="_blank">Forgot password</a></label><br />
+			<label class="not-having-account-lbl">Not having an account? <a href="https://premast.com/sign-up/" id="signUpLink" style="color:#1E6DFB" target="_blank">Sign Up</a></label> <a href="https://premast.com/help-center/" target="_blank"><img class="vector-help" id="help-vector" src="Images/Vector.png" /></a>
+			<div class="disp-n" id="for-future-use">
+				<p><a class="btn btn-primary" href="https://premast.com/help-center/" id="suportBtn" target="_blank">Support</a></p>
+				<span><a href="https://premast.com/plus-terms-of-use/" style="color:#1E6DFB;font-size:12px;" target="_blank">Terms and Conditions</a> | <a href="https://premast.com/privacy-policy/" style="color:#1E6DFB;font-size:12px;" target="_blank">Privacy Policy</a></span><br />
+				<label class="tell-friends-lbl">Tell your friends about <a href="https://premast.com/premast-plus/" id="premast-plus-info" style="color:#1E6DFB" target="_blank">premast plus</a></label>
+				<div class="ms-Grid-row">
+					<div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg4 alignDivContentToCenter"><img id="fb-share-link" src="Images/fb-share.png" /></div>
+					<div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg4"><img id="in-share-link" src="Images/linkedin-share.png" /></div>
+					<div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg4 alignDivContentToCenter"><img id="email-share-link" src="Images/email-share.png" /></div>
+				</div>
+				<br />
+				<label class="tell-friends-lbl">(c) 2018 Premast-powerpoint design solutions</label>
+			</div>
+		</div>
+	</div>
+	<div id="mainArea">
+		<div class="loader disp-n" id="temp-spinner" style="text-align:center;margin:auto;margin-top:30px;"></div>
+		<div class="alignDivContentToCenter disp-n" id="graphicItemsContainer">
+			<!--***-->
+			<div id="graphicItemsArea">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<div class="btn btn-secondary active showTemplatesLbl"><input autocomplete="off" id="showTemplatesBtn" name="templates" type="radio" /> <img src="Images/templates-icon.png" /></div>
+					<div class="btn btn-secondary showImagesLbl"><input autocomplete="off" id="showImagesBtn" name="images" type="radio" /> <img src="Images/graphics-icon.png" /></div>
+					<div class="btn btn-secondary showIconsLbl"><input autocomplete="off" id="showIconsBtn" name="icons" type="radio" /> <img src="Images/icons-icon.png" /></div>
+					<div class="btn btn-secondary showTextLbl"><input autocomplete="off" id="showTextBtn" name="text" type="radio" /> <img src="Images/background-icon.png" /></div>
+					<div class="btn btn-secondary showMoreLbl" style="cursor:auto;">
+						<input autocomplete="off" class="popup" id="showMoreBtn" name="text" type="radio" /> <img src="Images/more-icon.png" /> <span class="popuptext disp-n" id="myPopup">
+							<!--***--> <span class="popup-lbl" id="goto-website">Go to WebSite</span><br />
+							<span class="popup-lbl" id="goto-community">Premast community</span><br />
+							<span class="popup-lbl" id="goto-support">Support</span><br />
+							<span class="popup-lbl" id="goto-about">About Premast Plus</span><br />
+							<span class="popup-lbl" id="goto-signout">Sign out</span>
+						</span>
+						<hr style="border: 1px solid #215DC9;margin-top:5px;margin-bottom:8px;" /><span class="popuptext disp-n" id="myPopup">
+							<img class="logo-img-format-admin-panel" src="Images/Group 4.png" /><br />
+							<img class="version-img-format-admin-panel" src="Images/Version 1.01 2019B.png" />
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group" style="margin:auto;padding-top:15px;width:300px;	">
+				<div class="input-group">
+					<div class="input-group-addon"></div>
+					<input class="form-control" id="searchBox" placeholder="Search" type="text" />
+				</div>
+			</div>
+			<div class="loader disp-n" id="group-refresh-spinner" style="text-align:center;margin:auto"></div>
+			<div style="border:none;">
+				<div class="container" id="nav-templates"><!--templates tab 1 / dbExt: pptmplt--></div>
+				<div class="container" id="nav-images"><!-- graphics tab 2 / dbExt: img or image--></div>
+				<div class="container" id="nav-icons"><!-- icons tab 3 / dbExt: svg--></div>
+				<div class="container" id="nav-text"><!--background tab / dbExt: bckgrnd--></div>
+			</div>
+		</div>
+		<div class="pager disp-n">
+			<div style="margin: 0 auto;"><label class="btn btn-secondary" id="first-page" title="First"><img src="Images/first-page-icon.png" /> </label> <label class="btn btn-secondary" id="previous-page" style="margin-left:-20px;" title="Previous"> <img src="Images/previous-page-icon.png" /> </label> <label class="btn btn-secondary label-pager-count"> </label> <label class="btn btn-secondary" id="next-page" style="margin-right:-20px" title="Next"> <img src="Images/mext-page-icon.png" /> </label> <label class="btn btn-secondary" id="last-page" title="Last"> <img src="Images/last-page-icon.png" /> </label></div>
+		</div>
+	</div>
+	<!-- FabricUI component used for displaying notifications -->
+	<!-- Modal -->
+	<div class="container">
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<!-- Modal content-->
+				<div class="modal-content" id="modal-container">
+					<div class="modal-header" style="text-align:center!important;height:50px;">
+						<!--<h4 class="modal-title ms-Label" style="font-size:medium;margin:auto"></h4>-->
+						<label class="modal-title ms-Label" style="font-size:medium;margin:auto"></label>
+					</div>
+					<div class="modal-body">
+						<label class="modal-content-text ms-Label"></label>
+					</div>
+					<div class="modal-footer">
+						<button id="close-modal-btn" type="button" class="ms-Button ms-Button--small ms-Button--primary" style="color:white" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="ms-MessageBanner" id="notification-popup">
+	<div class="ms-MessageBanner-content">
+	<div class="ms-MessageBanner-text">
+	<div class="ms-MessageBanner-clipper">
+	<div class="ms-font-m-plus ms-fontWeight-semibold" id="notification-header"></div>
+
+	<div class="ms-font-m ms-fontWeight-semilight" id="notification-body"></div>
+	</div>
+	</div>
+	<button class="ms-MessageBanner-expand disp-n"></button>
+
+	<div class="ms-MessageBanner-action"></div>
+	</div>
+	<button class="ms-MessageBanner-close"></button>
+	</div>-->
+</body>
+</html>
