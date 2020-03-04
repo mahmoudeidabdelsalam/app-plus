@@ -10,7 +10,7 @@ var ppGraphicsInjectorConfigurationData = {
 	"msClientID": "",
 	"baseUrl": "https://premast.com/wp-json/wp/api/",
 	"logInUrl": "users/login/",
-	"getGraphicsUrl": "graphics/GetGraphics?per_page=-1",
+	"getGraphicsUrl": "graphics/GetGraphics?per_page=10",
 	"getGraphicUrl": "graphics/GetGraphic",
 	"useStaticData": false,
 	"usePaging": false
