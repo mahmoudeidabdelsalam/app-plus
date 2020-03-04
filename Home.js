@@ -364,27 +364,23 @@
 					if (grItem.Category === graphicCategories.Templates && counterTemplates % 2 === 0) {
 						rowDivTemplates = $('<div>');
 						rowDivTemplates.addClass('row');
-						rowDivTemplates.addClass('display-flex');
 						templatesTab.append(rowDivTemplates);
 					} else if (grItem.Category === graphicCategories.Graphics && counterGraphics % 2 === 0) {
 						rowDivGraphics = $('<div>');
 						rowDivGraphics.addClass('row');
-						rowDivGraphics.addClass('display-flex');
 						imagesTab.append(rowDivGraphics);
-					} else if (grItem.Category === graphicCategories.Icons && counterIcons % 3 === 0) {
+					} else if (grItem.Category === graphicCategories.Icons && counterIcons % 4 === 0) {
 						rowDivIcons = $('<div>');
 						rowDivIcons.addClass('row');
-						rowDivIcons.addClass('display-flex');
 						iconsTab.append(rowDivIcons);
 					} else if (grItem.Category === graphicCategories.Background && counterBackground % 2 === 0) {
 						rowDivBackground = $('<div>');
 						rowDivBackground.addClass('row');
-						rowDivBackground.addClass('display-flex');
 						textTab.append(rowDivBackground);
 
 					}
 
-					var rowCol = $('<div  id= "' + grItem.Id + '">');
+					var rowCol = $('<div class="over-img"  id= "' + grItem.Id + '">');
 					var imageImg = new Image();
 					imageImg.title = grItem.Name;
 					imageImg.alt = grItem.Name;
